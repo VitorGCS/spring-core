@@ -19,7 +19,20 @@ public class TrackCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		// TODO Auto-generated method stub
-		return fortuneService.getFortune();
+		return "Just Do it: "+fortuneService.getFortune();
 	}
+	
+	//add an init method
+	public void doMyStartupStuff() {
+		System.out.println("TrackCoach: inside method doMyStartupStuff ");
+	}
+	
+	//add a destroy method
+	public void doMyCleanupStuff() {
+		System.out.println("TrackCoach: inside method doMyCleanupStuff ");
+	}
+	
+	
+	
 
 }
