@@ -3,3 +3,6 @@
 
 #ignore all compiled classes
 *.class
+
+#bin folfer
+bin/*
