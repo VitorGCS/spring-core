@@ -1,4 +1,4 @@
-package com.luv2code.springdemo;
+package com.luv2code.springXml;
 
 public interface FortuneService {
 	public String getFortune();

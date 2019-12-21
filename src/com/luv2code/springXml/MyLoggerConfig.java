@@ -1,4 +1,4 @@
-package com.luv2code.springdemo;
+package com.luv2code.springXml;
  
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
