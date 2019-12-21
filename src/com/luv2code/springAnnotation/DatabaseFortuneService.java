@@ -3,6 +3,7 @@ package com.luv2code.springAnnotation;
 import java.util.Random;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -24,6 +25,7 @@ public class DatabaseFortuneService implements FortuneService {
 	
 	@PostConstruct
 	public void setupMyData() {
+		System.out.println(">> DatabaseFortuneService: inside of setupMyData() method");
 		data = new String[3];
 		
 		data[0]= firstfortune;
@@ -33,6 +35,13 @@ public class DatabaseFortuneService implements FortuneService {
 	
 	//create a random number generator
 	private Random myRandom = new Random();
+	
+	//define my destroy method
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println(">> DatabaseFortuneService: inside of doMyCleanupStuff() method");
+	}
+
 	
 	@Override
 	public String getFortune() {
